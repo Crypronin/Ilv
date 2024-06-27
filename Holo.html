@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Holo</title>
+<style>
+  body {
+    background-color: black;
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow:hidden;
+  }
+  h1 {
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 50px;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 70px); /* Four equal-width columns */
+    grid-template-rows: repeat(5, 50px); /* Five rows with auto height */
+    gap: 5px;
+    width: 400px; /* Adjust width as needed */
+    
+  }
+  .input-box {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* 30% opacity white */
+    background-color: transparent;
+    color: white;
+    font-size: 14px;
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  .sum-box {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* 30% opacity white */
+    background-color: transparent;
+    color: white;
+    font-size: 14px;
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  .total-sum {
+    margin-top: 1px;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    opacity: 100%;
+  }
+  .grid-container1{
+    display: grid;
+    grid-template-columns: repeat(5, 70px); /* Five equal-width columns */
+    grid-template-rows: repeat(5, 50px); /* Three rows with auto height */
+    gap: 10px;
+    width: auto; /* Adjust width as needed */
+    margin-top: 50px;
+    
+  }
+  .input-box{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  a {
+    color: rgb(92, 84, 84);
+    text-decoration: none;
+  }
+  a:hover {
+    color: rgb(180, 183, 171);
+  }
+
+  .navbar {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+  }
+  .navbar a {
+    color: rgb(165, 162, 162);
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 18px;
+  }
+  .navbar a:hover {
+    color: rgb(255, 255, 255);
+  }
+  
+</style>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="DHolo.html">D-HOLO</a>
+  </div>
+<h1>HOLO</h1>
+
+<div class="grid-container">
+  
+  <div class="row">
+    <input type="text" class="input-box" placeholder="T1S1" data-multiplier="75">
+    <input type="text" class="input-box" placeholder="T1S2" data-multiplier="375">
+    <input type="text" class="input-box" placeholder="T1S3" data-multiplier="1875">
+    <input type="text" class="sum-box" readonly>
+  </div>
+  <div class="row">
+    <input type="text" class="input-box" placeholder="T2S1" data-multiplier="500">
+    <input type="text" class="input-box" placeholder="T2S2" data-multiplier="2500">
+    <input type="text" class="input-box" placeholder="T2S3" data-multiplier="12500">
+    <input type="text" class="sum-box" readonly>
+  </div>
+  <div class="row">
+    <input type="text" class="input-box" placeholder="T3S1" data-multiplier="200">
+    <input type="text" class="input-box" placeholder="T3S2" data-multiplier="1500">
+    <input type="text" class="input-box" placeholder="T3S3" data-multiplier="7500">
+    <input type="text" class="sum-box" readonly>
+  </div>
+  <div class="row">
+    <input type="text" class="input-box" placeholder="T4S1" data-multiplier="600">
+    <input type="text" class="input-box" placeholder="T4S2" data-multiplier="3000">
+    <input type="text" class="input-box" placeholder="T4S3" data-multiplier="15000">
+    <input type="text" class="sum-box" readonly>
+  </div>
+  <div class="row">
+    <input type="text" class="input-box" placeholder="T5S1" data-multiplier="4000">
+    <input type="text" class="input-box" placeholder="T5S2" data-multiplier="20000">
+    <input type="text" class="input-box" placeholder="T5S3" data-multiplier="100000">
+    <input type="text" class="sum-box" readonly>
+  </div>
+</div>
+
+<!-- Total Sum Display -->
+<h2 class="total-sum" id="total-sum"></h2>
+
+<div class="grid-container1">
+  <a href="https://sandbox.illuvidex.illuvium.io/account/profile?collection=Illuvials&finish=Holo&tier=1&stage=1" target="_blank">T1S1</a>
+  <a href="https://sandbox.illuvidex.illuvium.io/account/profile?collection=Illuvials&finish=Holo&tier=2&stage=1" target="_blank">T2S1</a>
+  <a href="https://sandbox.illuvidex.illuvium.io/account/profile?collection=Illuvials&finish=Holo&tier=3&stage=1" target="_blank">T3S1</a>
+  <a href="https://sandbox.illuvidex.illuvium.io/account/profile?collection=Illuvials&finish=Holo&tier=4&stage=1" target="_blank">T4S1</a>
+  <a href="https://sandbox.illuvidex.illuvium.io/account/profile?collection=Illuvials&finish=Holo&tier=5&stage=1" target="_blank">T5S1</a>
+
+  <a href="https://sandbox.illuvidex.illuvium.io/account/profile?collection=Illuvials&finish=Holo&tier=1&stage=2" target="_blank">T1S2</a>
+  <a href="https://sandbox.illuvidex.illuvium.io/account/profile?collection=Illuvials&finish=Holo&tier=2&stage=2" target="_blank">T2S2</a>
+  <a href="https://sandbox.illuvidex.illuvium.io/account/profile?collection=Illuvials&finish=Holo&tier=3&stage=2" target="_blank">T3S2</a>
+  <a href="https://sandbox.illuvidex.illuvium.io/account/profile?collection=Illuvials&finish=Holo&tier=4&stage=2" target="_blank">T4S2</a>
+  <a href="https://sandbox.illuvidex.illuvium.io/account/profile?collection=Illuvials&finish=Holo&tier=5&stage=2" target="_blank">T5S2</a>
+
+  <a href="https://sandbox.illuvidex.illuvium.io/account/profile?collection=Illuvials&finish=Holo&tier=1&stage=3" target="_blank">T1S3</a>
+  <a href="https://sandbox.illuvidex.illuvium.io/account/profile?collection=Illuvials&finish=Holo&tier=2&stage=3" target="_blank">T2S3</a>
+  <a href="https://sandbox.illuvidex.illuvium.io/account/profile?collection=Illuvials&finish=Holo&tier=3&stage=3" target="_blank">T3S3</a>
+  <a href="https://sandbox.illuvidex.illuvium.io/account/profile?collection=Illuvials&finish=Holo&tier=4&stage=3" target="_blank">T4S3</a>
+  <a href="https://sandbox.illuvidex.illuvium.io/account/profile?collection=Illuvials&finish=Holo&tier=5&stage=3" target="_blank">T5S3</a>
+</div>
+
+
+<script>
+// Function to calculate sum based on input values and multiplier
+function calculateSum(row) {
+  let inputs = row.querySelectorAll('.input-box');
+  let sum = 0;
+  
+  inputs.forEach(input => {
+    let value = parseFloat(input.value) || 0;
+    let multiplier = parseInt(input.getAttribute('data-multiplier')) || 0;
+    sum += value * multiplier;
+  });
+  
+  return sum.toFixed(2);
+}
+
+// Function to update total sum display
+function updateTotalSum() {
+    let totalSum = calculateTotalSum();
+    let formattedSum;
+
+    if (parseFloat(totalSum) % 1 === 0) {
+        formattedSum = parseFloat(totalSum).toFixed(0); // Display as an integer
+    } else {
+        formattedSum = parseFloat(totalSum).toFixed(2); // Display with two decimal places
+    }
+
+    document.getElementById('total-sum').textContent = formattedSum !== '0' ? `${formattedSum}` : '👀';
+}
+
+// Function to calculate total sum
+function calculateTotalSum() {
+  let totalSum = 0;
+  document.querySelectorAll('.sum-box').forEach(sumBox => {
+    totalSum += parseFloat(sumBox.value) || 0;
+  });
+  return totalSum.toFixed(2);
+}
+
+// Update sum box when any input changes
+document.querySelectorAll('.input-box').forEach(input => {
+  let key = input.getAttribute('placeholder'); // Use placeholder as key
+  input.value = sessionStorage.getItem(key) || ''; // Retrieve stored value
+  
+  input.addEventListener('input', function() {
+    let row = this.parentElement;
+    let sumBox = row.querySelector('.sum-box');
+    let sum = calculateSum(row);
+    sumBox.value = sum !== '0.00' ? sum : '';
+    sessionStorage.setItem(key, this.value); // Store updated value
+    
+    // Update total sum display
+    updateTotalSum();
+  });
+});
+
+// Initial calculation and storage on page load
+window.addEventListener('load', function() {
+  document.querySelectorAll('.input-box').forEach(input => {
+    let key = input.getAttribute('placeholder');
+    let storedValue = sessionStorage.getItem(key);
+    if (storedValue) {
+      input.value = storedValue;
+    }
+  });
+  
+  document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function() {
+      this.classList.add('clicked');
+    });
+  });
+
+  // Update sum boxes based on stored values
+  document.querySelectorAll('.row').forEach(row => {
+    let sumBox = row.querySelector('.sum-box');
+    let sum = calculateSum(row);
+    sumBox.value = sum !== '0.00' ? sum : '';
+  });
+  
+  // Update initial total sum display
+  updateTotalSum();
+});
+</script>
+
+</body>
+</html>
